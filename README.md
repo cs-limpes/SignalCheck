@@ -27,12 +27,24 @@ The visual scan also checks approximate regions of the screenshot and generates 
 ## Setup
 
 ```bash
+git clone https://github.com/cs-limpes/SignalCheck.git
 cd SignalCheck
 npm install
 npm run dev
 ```
 
 Open the local URL printed by Next.js.
+
+## Current MVP Workflow
+
+1. Upload one or more screenshots.
+2. Click **Extract OCR** to populate editable OCR text.
+3. Click **Scan visuals** to run the browser-local visual model.
+4. Review visual scan suggestions and approximate red-outlined evidence clips.
+5. Click **Analyze evidence** to generate the human-review report.
+6. Export the report as Markdown or JSON if needed.
+
+The app includes a guided "Next step" card so users know what action comes next.
 
 ## Scripts
 
@@ -62,6 +74,25 @@ The starter database lives at `src/data/rules.json`. It contains sample entries 
 Plain string terms are matched case-insensitively with word boundaries. Regex terms can be written as JSON strings like `"/\\b1488\\b/i"`.
 
 Visual review uses the same rules by converting model suggestions and optional reviewer notes into evidence text. For example, a local visual-model suggestion for "swastika" creates a visual-observation evidence item that can match the editable `swastika` rule.
+
+## Handoff Notes
+
+- GitHub repo: `https://github.com/cs-limpes/SignalCheck`
+- The MVP is currently browser-only. There is no backend, database, upload endpoint, or token storage.
+- First OCR or visual scan may download browser model assets.
+- Visual detection currently uses zero-shot image classification plus approximate screenshot regions. It is not precise object detection.
+- Evidence clips are session-only generated browser data URLs. They are not stored or uploaded.
+- The report language intentionally avoids identity claims and should keep doing so.
+- Generated directories/files such as `node_modules`, `.next`, logs, and `tsconfig.tsbuildinfo` are ignored.
+
+## Likely Next Work
+
+- Add profile-link intake with explicit access status: accessible, cannot access, private, auth required, rate limited, unsupported, or error.
+- Add optional read-only OAuth connectors where platforms allow it. Never request write, post, like, follow, DM, or account-management scopes.
+- Explore public/read-only APIs for Bluesky, Mastodon, YouTube, X, Reddit, TikTok, Instagram/Threads, and Meta properties.
+- Improve visual localization with a real local object-detection or image-region model if a suitable validated option is found.
+- Add clearer source panels for username, bio, follower/following context, and profile metadata.
+- Expand tests around report source status, visual evidence, and export output.
 
 ## Ethical Limits
 
