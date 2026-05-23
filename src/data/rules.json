@@ -1,0 +1,131 @@
+{
+  "editable_notice": "EDITABLE STARTER SAMPLE RULES ONLY. Replace, remove, or expand these entries with reviewed sources and local policy before relying on reports.",
+  "rules": [
+    {
+      "id": "num-1488",
+      "term": "/\\b14[\\s._-]*88\\b|\\b1488\\b/i",
+      "category": "number",
+      "risk": "high",
+      "meaning": "Often used in white supremacist spaces by combining references to the '14 words' slogan and '88' as a coded reference to HH.",
+      "context_note": "Can appear in unrelated usernames, dates, gamer tags, or OCR errors; surrounding profile text and repeated signals matter.",
+      "review_guidance": "Check whether the number appears with ideology-linked slogans, symbols, account follows, or repeated use across screenshots."
+    },
+    {
+      "id": "num-88",
+      "term": "/\\b88\\b/i",
+      "category": "number",
+      "risk": "low",
+      "meaning": "Sometimes used as coded shorthand for HH in extremist contexts.",
+      "context_note": "Very ambiguous by itself because it can indicate a birth year, jersey number, address, price, or ordinary handle text.",
+      "review_guidance": "Treat as weak evidence unless it repeats or appears near clearer slogans, symbols, or ideological references."
+    },
+    {
+      "id": "phrase-blood-soil",
+      "term": "blood and soil",
+      "category": "slogan",
+      "risk": "high",
+      "meaning": "A slogan historically associated with ethno-nationalist and Nazi propaganda.",
+      "context_note": "Could appear in historical criticism, quotation, documentation, satire, or news discussion.",
+      "review_guidance": "Look for whether the phrase is endorsed, quoted critically, or surrounded by other ideological signals."
+    },
+    {
+      "id": "symbol-black-sun",
+      "term": "/\\b(black sun|sonnenrad)\\b/i",
+      "category": "symbol",
+      "risk": "high",
+      "meaning": "A symbol reference used in some neo-Nazi and white supremacist contexts.",
+      "context_note": "The words can also appear in art, music, history, gaming, or anti-extremism discussion.",
+      "review_guidance": "Review whether the reference is a visual symbol, an aesthetic phrase, or a critical discussion."
+    },
+    {
+      "id": "visual-swastika",
+      "term": "/\\b(swastika|hakenkreuz)\\b/i",
+      "category": "symbol",
+      "risk": "high",
+      "meaning": "A swastika can be used as a Nazi or neo-Nazi symbol in extremist contexts.",
+      "context_note": "The symbol can also appear in historical documentation, anti-extremism reporting, religious contexts, satire, or opposition speech.",
+      "review_guidance": "Confirm the visual context, orientation, accompanying text, and whether it is displayed approvingly or critically."
+    },
+    {
+      "id": "visual-confederate-flag",
+      "term": "confederate flag",
+      "category": "symbol",
+      "risk": "medium",
+      "meaning": "The Confederate battle flag is used in some racist, white supremacist, and anti-government contexts.",
+      "context_note": "It can also appear in history, regional identity, criticism, documentary material, or counter-speech; it is not conclusive by itself.",
+      "review_guidance": "Look for whether it is paired with racist slogans, other extremist symbols, threats, or repeated ideological signals."
+    },
+    {
+      "id": "visual-ss-bolts",
+      "term": "/\\b(ss bolts|schutzstaffel bolts|lightning bolts)\\b/i",
+      "category": "symbol",
+      "risk": "high",
+      "meaning": "SS bolt imagery is associated with Nazi and neo-Nazi symbolism.",
+      "context_note": "Lightning-like graphics can be ordinary branding, music imagery, sports design, or OCR/visual-review error.",
+      "review_guidance": "Check whether the shape clearly resembles SS bolts and whether it appears with other Nazi-linked references."
+    },
+    {
+      "id": "visual-totenkopf",
+      "term": "/\\b(totenkopf|death's head|deaths head)\\b/i",
+      "category": "symbol",
+      "risk": "high",
+      "meaning": "Totenkopf or death's-head imagery can reference Nazi SS symbolism in extremist contexts.",
+      "context_note": "Skull imagery is common in fashion, motorcycles, music, games, military history, and tattoo art.",
+      "review_guidance": "Review the exact design and surrounding account context before treating it as a meaningful signal."
+    },
+    {
+      "id": "visual-ok-hand-sign",
+      "term": "/\\b(ok hand sign|okay hand sign)\\b/i",
+      "category": "symbol",
+      "risk": "low",
+      "meaning": "The OK hand gesture has been used as a trolling or extremist signal in some contexts.",
+      "context_note": "It is extremely ambiguous and commonly means OK, approval, diving signal, game gesture, or ordinary posing.",
+      "review_guidance": "Treat as weak evidence unless repeated or paired with clearer extremist symbols, slogans, or account references."
+    },
+    {
+      "id": "visual-nazi-salute",
+      "term": "/\\b(nazi salute|roman salute)\\b/i",
+      "category": "symbol",
+      "risk": "high",
+      "meaning": "A Nazi salute or similar raised-arm gesture can indicate extremist signaling when used approvingly.",
+      "context_note": "Still images can mislead; raised arms can be waving, dancing, pointing, performance, parody, or historical depiction.",
+      "review_guidance": "Check sequence context if available, caption text, repetition, and whether the gesture is endorsed or criticized."
+    },
+    {
+      "id": "visual-hate-symbol-tattoo",
+      "term": "/\\b(hate symbol tattoo|extremist tattoo|symbol tattoo)\\b/i",
+      "category": "symbol",
+      "risk": "medium",
+      "meaning": "A tattoo resembling an extremist symbol can be a relevant visual signal when the design is identifiable.",
+      "context_note": "Tattoos are easy to misread from screenshots, can be cover-ups, art, music references, or unrelated designs.",
+      "review_guidance": "Document the visible design carefully, avoid guessing, and seek corroborating context before relying on it."
+    },
+    {
+      "id": "phrase-day-of-rope",
+      "term": "day of the rope",
+      "category": "phrase",
+      "risk": "high",
+      "meaning": "A violent extremist phrase from white supremacist fiction and propaganda.",
+      "context_note": "May appear in reporting, research, fiction analysis, or condemnation rather than endorsement.",
+      "review_guidance": "Escalate for careful human review if presented approvingly or paired with threats, targets, or repeated extremist references."
+    },
+    {
+      "id": "account-skrewdriver",
+      "term": "skrewdriver",
+      "category": "account_reference",
+      "risk": "medium",
+      "meaning": "A reference associated with a white power band and related music scenes.",
+      "context_note": "Could be a music-history reference, typo, quotation, or critical discussion.",
+      "review_guidance": "Check whether the account appears to promote the reference, simply mention it, or discuss it critically."
+    },
+    {
+      "id": "phrase-groyper",
+      "term": "groyper",
+      "category": "account_reference",
+      "risk": "medium",
+      "meaning": "A reference associated with a far-right online subculture.",
+      "context_note": "Meaning depends heavily on community, meme use, criticism, and surrounding political context.",
+      "review_guidance": "Look for repeated subculture references, linked accounts, memes, and whether the term is self-identification or commentary."
+    }
+  ]
+}
